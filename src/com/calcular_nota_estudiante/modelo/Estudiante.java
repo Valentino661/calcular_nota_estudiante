@@ -39,6 +39,12 @@ public class Estudiante implements Serializable{// Clase padre
         this.semestre = semestre;
     }
 
+    public Estudiante(String nombre, int codigo, int semestre, int numeroNotas) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.semestre = semestre;
+        this.numeroNotas = numeroNotas;
+    }
      
 
     public String getNombre() {

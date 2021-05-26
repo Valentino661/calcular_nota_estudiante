@@ -25,22 +25,54 @@ public class CalcularNotaEstudiante {
         ControladorEstudiante control = new ControladorEstudiante();
 
   
-        control.añadirEstudiantes(new EstudianteQuinto("Valentin Garcia",1234,"Ingenieria de Sistemas"), 
+        control.anadirEstudiantes(new EstudianteQuinto("Valentin Garcia",1234,"Ingenieria de Sistemas"), 
                 new Asignatura("Programacion",true,control.notas(4, 4.2, 4.1, 4.2)),
                 new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1, 3.3)), 
                 new Asignatura("Matematica",true,control.notas(3.5, 4.2, 4.1, 3.5)));
         
-        control.añadirEstudiantes(new EstudianteQuinto("Carlos Ruiz",4321,"Ingenieria de Sistemas"), 
+        control.anadirEstudiantes(new EstudianteQuinto("Carlos Ruiz",4321,"Ingenieria de Sistemas"), 
                 new Asignatura("Programacion",true,control.notas(3.5, 4.2, 4.1, 3.5)), 
                 new Asignatura("Fisica",false,control.notas(3.5, 2.1, 3.2, 2.6)), 
                 new Asignatura("Matematica",false,control.notas(3.5, 2.2, 4.1, 3.6)));
         
-        control.añadirEstudiantes(new EstudianteSexto("Luis Alberto",6789,"Ingenieria de Sistemas"), 
+        control.anadirEstudiantes(new EstudianteQuinto("Jose Hector",5237,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4, 4.2, 4.1, 4.2)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.2, 4.1, 3.5)));
+        
+        control.anadirEstudiantes(new EstudianteQuinto("Camila Aristizabal ",8234,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4, 4.2, 4.1, 4.2)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.2, 4.1, 3.5)));
+        
+        control.anadirEstudiantes(new EstudianteQuinto("Manuela Flores",9261,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4, 4.2, 4.1, 4.2)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.2, 4.1, 3.5)));
+        
+//-------------------------------------------------------------------------------------------------------
+        
+        control.anadirEstudiantes(new EstudianteSexto("isabella Rendon",6174,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4, 4.2, 4.1)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.1, 3.5)));
+        
+        control.anadirEstudiantes(new EstudianteSexto("mariana Toro",7244,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4.2, 4.1, 4.2)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.2, 3.5)));
+        
+        control.anadirEstudiantes(new EstudianteSexto("Lucas Alberto",6993,"Ingenieria de Sistemas"), 
+                new Asignatura("Programacion",true,control.notas(4, 4.1, 4.2)),
+                new Asignatura("Fisica",true,control.notas(3.5, 4.1, 3.3)), 
+                new Asignatura("Matematica",true,control.notas(3.5, 4.2, 4.1)));
+        
+        control.anadirEstudiantes(new EstudianteSexto("Luis Alberto",6789,"Ingenieria de Sistemas"), 
                 new Asignatura("Programacion",false,control.notas(3.5, 4.2, 3.1)), 
                 new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1)), 
                 new Asignatura("Matematica",true,control.notas(1.5, 4.2, 1.1)));
         
-        control.añadirEstudiantes(new EstudianteSexto("Salome loaiza",3456,"Ingenieria de Sistemas"), 
+        control.anadirEstudiantes(new EstudianteSexto("Salome loaiza",3456,"Ingenieria de Sistemas"), 
                 new Asignatura("Programacion",false,control.notas(1.5, 2.3, 4.2)), 
                 new Asignatura("Fisica",true,control.notas(3.5, 4.2, 4.1)), 
                 new Asignatura("Matematica",true,control.notas(1.5, 4.2, 1.1)));

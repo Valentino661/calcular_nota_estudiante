@@ -8,6 +8,7 @@ package com.calcular_nota_estudiante.controlador;
 import com.calcular_nota_estudiante.modelo.Asignatura;
 import com.calcular_nota_estudiante.modelo.Estudiante;
 import com.calcular_nota_estudiante.modelo.EstudianteQuinto;
+import com.calcular_nota_estudiante.modelo.EstudianteSexto;
 /**
  *
  * @author juanv
@@ -15,7 +16,7 @@ import com.calcular_nota_estudiante.modelo.EstudianteQuinto;
 public class ControladorEstudiante{
 
     //Atributos
-    private int NUMERO_ESTUDIANTES=4;
+    private int NUMERO_ESTUDIANTES=10;
     private double DECIMAS_EXTRA = 0.5;
     private Estudiante[] estudiantes;
     private int contador = 0;
@@ -29,11 +30,23 @@ public class ControladorEstudiante{
     
     private void  inicializarEstudiante()
     {
-        estudiantes[0]= new EstudianteQuinto ("Pepe",1234,"Ingenieria de Sistemas");
+        estudiantes[0]= new EstudianteQuinto ("Valentin Garcia", 5, "Ingenieria de Sistemas");
+        estudiantes[1]= new EstudianteQuinto ("Carlos Ruiz", 5, "Ingenieria de Sistemas");
+        estudiantes[2]= new EstudianteQuinto ("Jose Hector", 5, "Ingenieria de Sistemas");
+        estudiantes[3]= new EstudianteQuinto ("Camila Aristizabal", 5, "Ingenieria de Sistemas");
+        estudiantes[4]= new EstudianteQuinto ("Manuela Flores", 5, "Ingenieria de Sistemas");
+//---------------------------------------------------------------------------------------------------
+        estudiantes[5]= new EstudianteSexto ("isabella Rendon", 6, "Ingenieria de Sistemas");
+        estudiantes[6]= new EstudianteSexto ("mariana Toro", 6, "Ingenieria de Sistemas");
+        estudiantes[7]= new EstudianteSexto ("Lucas Alberto", 6, "Ingenieria de Sistemas");
+        estudiantes[8]= new EstudianteSexto ("Luis Alberto", 6, "Ingenieria de Sistemas");
+        estudiantes[9]= new EstudianteSexto ("Salome loaiza", 6, "Ingenieria de Sistemas");
+        
+        contador ++;
     }
 
     //Metodos
-    public void añadirEstudiantes(Estudiante est, Asignatura prog, Asignatura fis, Asignatura mat) {
+    public void anadirEstudiantes(Estudiante est, Asignatura prog, Asignatura fis, Asignatura mat) {
 
         Asignatura asignaturas[] = {prog, fis, mat};//Arreglo de materias pasadas por parametro
         if (contador < NUMERO_ESTUDIANTES) {
@@ -167,7 +180,7 @@ public class ControladorEstudiante{
         return notas; 
     }
     
-    public Estudiante[] getEstudiante() {
+    public Estudiante[] getEstudiantes() {
         return estudiantes;
     }
 
