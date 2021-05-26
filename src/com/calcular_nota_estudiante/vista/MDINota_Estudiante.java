@@ -657,7 +657,11 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
     private void mnuDiagramaPromediosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuDiagramaPromediosActionPerformed
         // TODO add your handling code here:
         LineChartExample grafico = new LineChartExample();
+        grafico.setIconifiable(true);
+        grafico.setClosable(true);
+        grafico.setDefaultCloseOperation(HIDE_ON_CLOSE);        
         desktopPane.add(grafico);
+        
         grafico.show();
         
     }//GEN-LAST:event_mnuDiagramaPromediosActionPerformed
@@ -735,9 +739,9 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         
-        Estudiante estudiante = new Estudiante(txtNombre.getText(),txtCodigo.getText(), txtSemestre.getText(),
-            txtAsignatura.getText(),txtNota1.getText(), txtNota2.getText(), txtNota3.getText(), txtNota4.getText());
-        lista.add(estudiante);
+        //Estudiante estudiante = new Estudiante(txtNombre.getText(),txtCodigo.getText(), txtSemestre.getText(),
+         //   txtAsignatura.getText(),txtNota1.getText(), txtNota2.getText(), txtNota3.getText(), txtNota4.getText());
+        //lista.add(estudiante);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     /**
