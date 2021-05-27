@@ -76,33 +76,33 @@ public class ControladorEstudiante{
 
     public void promedio() {
 
-        Asignatura[] materia;//arreglo de materias
+        Asignatura[] asignatura;//arreglo de materias
         for (Estudiante std : estudiantes) {
-            materia = std.getAsignaturas();//se instancia con las materias de cada estudiante
+            asignatura = std.getAsignaturas();//se instancia con las materias de cada estudiante
             
-            rango(materia, std);
+            rango(asignatura, std);
             //condicional para programacion
-            if (materia[0].isAsistencia()) {//si asistió a todas las clases ejecuta este metodo
-                materia[0].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);//solicita las notas y las decimas para promediar
+            if (asignatura[0].isAsistencia()) {//si asistió a todas las clases ejecuta este metodo
+                asignatura[0].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);//solicita las notas y las decimas para promediar
                 
             } else {
-                materia[0].promediar(std.getNumeroNotas());//si no asistio a todas las clases solo promedia
+                asignatura[0].promediar(std.getNumeroNotas());//si no asistio a todas las clases solo promedia
 
             }
             //condicional para fisica
-            if (materia[1].isAsistencia()) {
-                materia[1].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);
+            if (asignatura[1].isAsistencia()) {
+                asignatura[1].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);
                 
             } else {
-                materia[1].promediar(std.getNumeroNotas());
+                asignatura[1].promediar(std.getNumeroNotas());
 
             }
             //condicional para matematica
-            if (materia[2].isAsistencia()) {
-                materia[2].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);
+            if (asignatura[2].isAsistencia()) {
+                asignatura[2].promediar(std.getNumeroNotas(), DECIMAS_EXTRA);
                 
             } else {
-                materia[2].promediar(std.getNumeroNotas());
+                asignatura[2].promediar(std.getNumeroNotas());
 
             }
             

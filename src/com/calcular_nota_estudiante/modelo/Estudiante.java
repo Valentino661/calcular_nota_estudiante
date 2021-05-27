@@ -39,11 +39,12 @@ public class Estudiante implements Serializable{// Clase padre
         this.semestre = semestre;
     }
 
-    public Estudiante(String nombre, int codigo, int semestre, int numeroNotas) {
+    public Estudiante(String nombre, int codigo, int semestre, int numeroNotas, Asignatura asignaturas[]) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.semestre = semestre;
         this.numeroNotas = numeroNotas;
+        this.asignaturas = asignaturas;      
     }
      
 

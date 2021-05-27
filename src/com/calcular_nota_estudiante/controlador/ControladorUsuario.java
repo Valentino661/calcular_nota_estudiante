@@ -5,7 +5,7 @@
  */
 package com.calcular_nota_estudiante.controlador;
 
-import com.calcular_nota_estudiante.execepciones.UsuarioExcepcion;
+import com.calcular_nota_estudiante.excepciones.UsuarioExcepcion;
 import com.calcular_nota_estudiante.modelo.Rol;
 import com.calcular_nota_estudiante.modelo.Usuario;
 import java.util.ArrayList;

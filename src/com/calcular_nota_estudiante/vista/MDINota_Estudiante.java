@@ -7,7 +7,7 @@ package com.calcular_nota_estudiante.vista;
 
 import com.calcular_nota_estudiante.controlador.ControladorEstudiante;
 import com.calcular_nota_estudiante.controlador.ControladorUsuario;
-import com.calcular_nota_estudiante.execepciones.UsuarioExcepcion;
+import com.calcular_nota_estudiante.excepciones.UsuarioExcepcion;
 import com.calcular_nota_estudiante.modelo.Estudiante;
 import com.calcular_nota_estudiante.modelo.Usuario;
 import java.beans.PropertyVetoException;
@@ -260,7 +260,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
         };
         tblNotas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Codigo", "semestre", "Asignatura", "nota 1", "nota 2", "nota 3", "nota 4"
@@ -277,7 +277,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
         };
         tblNotaTotal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Codigo", "Semestre", "Asignatura", "NT"
@@ -507,7 +507,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
                         .addGroup(jifListaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jifListaEstudiantesLayout.setVerticalGroup(
             jifListaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -531,6 +531,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
         desktopPane.add(jifListaEstudiantes);
         jifListaEstudiantes.setBounds(20, 10, 550, 382);
 
+        jifNotaCalculada.setClosable(true);
         jifNotaCalculada.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         jifNotaCalculada.setIconifiable(true);
         jifNotaCalculada.setMaximizable(true);
@@ -545,7 +546,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
         };
         tblNotaAsignatura.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Semestre", "Codigo", "Programacion", "Matematicas", "Fisica"
@@ -575,7 +576,7 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
                     .addGroup(jifNotaCalculadaLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jifNotaCalculadaLayout.setVerticalGroup(
@@ -584,8 +585,8 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         desktopPane.add(jifNotaCalculada);
@@ -739,11 +740,35 @@ public class MDINota_Estudiante extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         
-        //Estudiante estudiante = new Estudiante(txtNombre.getText(),txtCodigo.getText(), txtSemestre.getText(),
-         //   txtAsignatura.getText(),txtNota1.getText(), txtNota2.getText(), txtNota3.getText(), txtNota4.getText());
-        //lista.add(estudiante);
+        registrar();
+       
+     
     }//GEN-LAST:event_btnRegistrarActionPerformed
-
+   
+    private void registrar()
+    {
+        //Extrae el modelo de la tabla (Columnas y filas)
+        DefaultTableModel model = (DefaultTableModel) tblNotas.getModel();
+        //Limpia toda la tabla
+        model.getDataVector().removeAllElements();
+        //Declara un arreglo de objetos para representar una fila de la tabla
+        //Object[] fila = {"234342","Juan Valentin",4000000, false};
+        // Adicionar la fila a la tabla
+        //model.addRow(fila);
+        //Refrescar la tabla
+        
+        //Recorriendo el controlador de empleados y llenando mi tabla
+        for(Estudiante est: controlEstudiante.getEstudiantes())
+        {
+            if(est!=null)
+            {
+                Object[] fila = {txtNombre.getText(),txtCodigo.getText(), txtSemestre.getText(),
+            txtAsignatura.getText(),txtNota1.getText(), txtNota2.getText(), txtNota3.getText(), txtNota4.getText()};
+            }       
+        }        
+        tblNotas.repaint();
+    }
+    
     /**
      * @param args the command line arguments
      */

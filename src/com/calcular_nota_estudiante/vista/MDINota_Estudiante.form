@@ -383,7 +383,7 @@
                 <Component class="javax.swing.JTable" name="tblNotas">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="8" rowCount="1">
+                      <Table columnCount="8" rowCount="0">
                         <Column editable="true" title="Nombre" type="java.lang.Object"/>
                         <Column editable="true" title="Codigo" type="java.lang.Object"/>
                         <Column editable="true" title="semestre" type="java.lang.Object"/>
@@ -458,7 +458,7 @@
                 <Component class="javax.swing.JTable" name="tblNotaTotal">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="1">
+                      <Table columnCount="5" rowCount="0">
                         <Column editable="true" title="Nombre" type="java.lang.String"/>
                         <Column editable="true" title="Codigo" type="java.lang.Integer"/>
                         <Column editable="true" title="Semestre" type="java.lang.String"/>
@@ -722,6 +722,7 @@
         </Container>
         <Container class="javax.swing.JInternalFrame" name="jifNotaCalculada">
           <Properties>
+            <Property name="closable" type="boolean" value="true"/>
             <Property name="defaultCloseOperation" type="int" value="1"/>
             <Property name="iconifiable" type="boolean" value="true"/>
             <Property name="maximizable" type="boolean" value="true"/>
@@ -745,7 +746,7 @@
                               <Component id="jLabel4" min="-2" pref="185" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane4" pref="384" max="32767" attributes="0"/>
+                          <Component id="jScrollPane4" pref="589" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -757,8 +758,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane4" min="-2" pref="205" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jScrollPane4" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace pref="151" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -774,7 +775,7 @@
                 <Component class="javax.swing.JTable" name="tblNotaAsignatura">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="6" rowCount="1">
+                      <Table columnCount="6" rowCount="0">
                         <Column editable="true" title="Nombre" type="java.lang.String"/>
                         <Column editable="true" title="Semestre" type="java.lang.Integer"/>
                         <Column editable="true" title="Codigo" type="java.lang.Integer"/>
